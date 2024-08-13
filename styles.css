@@ -383,3 +383,53 @@ footer p {
     padding-left: 20px;
     text-align: left;
 }
+
+#academic-paper {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#academic-paper h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paper {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.paper h3 {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.paper .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.paper .btn:hover {
+    background: #555;
+}
+
