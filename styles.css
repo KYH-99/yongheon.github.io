@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -7,105 +9,10 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-section {
-    padding: 60px 0;
-}
-
-#about, #projects, #contact {
+    position: relative;
     text-align: center;
-}
-
-.project-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.project {
-    background: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    width: calc(33% - 40px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-    margin-top: 0;
-}
-
-.project .btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.project .btn:hover {
-    background: #555;
-}
-
-.social-links a {
-    color: #333;
-    margin: 0 10px;
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Additional CSS for the cinema effect */
-html, body {
-    height: 100%;
-    margin: 0;
+    color: white;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -116,6 +23,7 @@ html, body {
     background-size: cover;
 }
 
+/* 지직거리는 효과 제거 */
 .outer-scratch, .inner-scratch {
     height: inherit;
 }
@@ -129,15 +37,18 @@ html, body {
     left: 0;
     padding-left: 100px;
     opacity: .08;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/scratch.png') repeat center center;
-    -webkit-animation: scratch 0.45s steps(1) infinite;
-    animation: scratch 0.45s steps(1) infinite;
+    /* 지직거리는 배경 이미지 삭제 */
+    /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/scratch.png') repeat center center; */
+    /* 애니메이션 삭제 */
+    /* -webkit-animation: scratch 0.45s steps(1) infinite; */
+    /* animation: scratch 0.45s steps(1) infinite; */
 }
 
 .inner-scratch:after {
     left: 30%;
-    -webkit-animation: inner-scratch 2s infinite;
-    animation: inner-scratch 2s infinite;
+    /* 애니메이션 삭제 */
+    /* -webkit-animation: inner-scratch 2s infinite; */
+    /* animation: inner-scratch 2s infinite; */
 }
 
 .grain:after {
@@ -148,32 +59,34 @@ html, body {
     top: -5%;
     left: -5%;
     opacity: .11;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center;
-    -webkit-animation: grain 0.5s steps(1) infinite;
-    animation: grain 0.5s steps(1) infinite;
+    /* 지직거리는 배경 이미지 삭제 */
+    /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center; */
+    /* 애니메이션 삭제 */
+    /* -webkit-animation: grain 0.5s steps(1) infinite; */
+    /* animation: grain 0.5s steps(1) infinite; */
 }
 
 /*  Basic Title  */
 h1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 3.5em;
+    font-weight: 900; /* Bolder text */
+    font-size: 3em; /* Slightly larger font size */
     text-align: center;
-    color: #ffffff;
+    color: #ffffff; /* More vivid color */
     -webkit-animation: 3s fade;
     animation: 3s fade;
 }
-
+    
 h1 span {
     display: inline-block;
     position: relative;
     padding: .5em 1em;
 }
-
+    
 h1 span:before {
     display: block;
     content: '';
@@ -184,7 +97,7 @@ h1 span:before {
     -webkit-animation: 2.5s draw;
     animation: 2.5s draw;
 }
-
+    
 h1 span:after {
     display: block;
     content: '';
@@ -240,6 +153,7 @@ h1 span:after {
     }
 }
 
+/* Quick Scratches */
 @keyframes scratch {
     0%, 100% {
         transform: translateX(0);
@@ -286,6 +200,7 @@ h1 span:after {
     }
 }
 
+/* Long Scratches */
 @keyframes inner-scratch {
     0% {
         transform: translateX(0);
@@ -363,4 +278,108 @@ h1 span:after {
     100% {
         opacity: 1;
     }
+}
+
+/* General Styling */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+#about, #projects, #contact {
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: calc(33% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project .btn:hover {
+    background: #555;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Year and content toggle */
+.year {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+.content {
+    display: none;
+    padding-left: 20px;
+    text-align: left;
 }
