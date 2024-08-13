@@ -504,7 +504,8 @@ footer p {
 
 .project-img {
     width: 100%;
-    height: auto;
+    height: 200px; /* 모든 이미지를 동일한 높이로 설정 */
+    object-fit: cover; /* 이미지가 영역을 채우도록 설정하고, 잘려도 상관없도록 함 */
     border-radius: 5px;
     margin-bottom: 10px;
 }
