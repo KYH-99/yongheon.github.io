@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Portfolio Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
+    <header>
         <div class="container">
-            <h1><a href="#">My Portfolio</a></h1>
+            <h1><a href="/">My Portfolio Blog</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/new-post">Write a Post</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="dark-section">
+    <!-- Example: Blog Listing -->
+    <section id="blog-list">
         <div class="container">
-            <h2>About Me</h2>
-            <p>안녕하세요! 저는 멋진 웹 경험을 만드는 것을 사랑하는 열정적인 개발자입니다...</p>
-        </div>
-    </section>
-
-    <section id="projects" class="dark-section">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <!-- Example Project -->
-                <div class="project">
-                    <h3>프로젝트 이름</h3>
-                    <p>프로젝트 설명...</p>
-                    <a href="#" class="btn">프로젝트 보기</a>
-                </div>
-                <!-- 추가 프로젝트를 여기에 추가할 수 있습니다 -->
+            <h2>Blog Posts</h2>
+            <div class="post">
+                <h3><a href="/post/1">Blog Post Title</a></h3>
+                <p>Short description of the blog post...</p>
             </div>
+            <!-- More posts... -->
         </div>
     </section>
 
-    <section id="contact" class="dark-section">
+    <!-- Example: Blog Post Creation -->
+    <section id="new-post">
         <div class="container">
-            <h2>Contact Me</h2>
-            <p>이메일로 언제든지 연락 주세요: <a href="mailto:dydgjs9920@naver.com">dydgjs9920@naver.com</a></p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="https://expeditionary.tistory.com/"><i class="fa-solid fa-blog"></i></a>
-            </div>
+            <h2>Write a New Post</h2>
+            <form id="postForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+                
+                <button type="submit">Post</button>
+            </form>
         </div>
     </section>
 
-    <footer class="dark-footer">
+    <!-- Example: Single Blog Post Display -->
+    <section id="blog-post">
         <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <h2>Blog Post Title</h2>
+            <p>Content of the blog post...</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio Blog. All rights reserved.</p>
         </div>
     </footer>
 
