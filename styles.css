@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 0;
+}
+
+#about, #projects, #contact {
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: calc(33% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project .btn:hover {
+    background: #555;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
