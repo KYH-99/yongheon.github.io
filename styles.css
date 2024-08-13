@@ -519,3 +519,10 @@ footer p {
 .project .btn:hover {
     background: #555;
 }
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block; /* 이미지를 블록 요소로 설정하여 여백을 제거 */
+    margin: 0 auto; /* 이미지를 중앙에 정렬 */
+}
