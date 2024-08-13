@@ -1,0 +1,142 @@
+
+<meta charset="utf-8">
+<html lang="ko">
+<head>
+    <link rel="stylesheet" type="text/css" href="./../style.css" />
+    <title>Raspberry Pi를 사용한 임베디드 시스템 텀 프로젝트(2)</title>
+</head>
+<body id="tt-body-page" class="">
+<div id="wrap" class="wrap-right">
+    <div id="container">
+        <main class="main ">
+            <div class="area-main">
+                <div class="area-view">
+                    <div class="article-header">
+                        <div class="inner-article-header">
+                            <div class="box-meta">
+                                <h2 class="title-article">Raspberry Pi를 사용한 임베디드 시스템 텀 프로젝트(2)</h2>
+                                <div class="box-info">
+                                    <p class="category">포트폴리오/텀 프로젝트</p>
+                                    <p class="date">2024-07-24 11:23:25</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="article-view">
+                        <div class="contents_style">
+                            <p data-ke-size="size18"><b>- Raspberry Pi 장비 구성</b></p>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-003.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size18"><b>- Raspberry Pi GPIO 구조</b></p>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-002.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size18"><b>- Raspberry Pi WiringPi pin 번호</b></p>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-004.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b>- 핵심 코드</b></p>
+<p data-ke-size="size16"><b>(1) 카메라</b></p>
+<pre id="code_1721786099445" class="cpp" data-ke-language="cpp" data-ke-type="codeblock"><code>void takePicture(void)
+
+{
+    printf("call python code\n");
+    system("python picam.py");
+    system("raspistill -o img.jpg");
+}</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><b>(2) LED</b></p>
+<pre id="code_1721786511343" class="cpp" data-ke-language="cpp" data-ke-type="codeblock"><code>void  redLedBlick(void)
+
+{
+    //LED ON
+    digitalWrite(RGBLEDPOWER,1);
+    digitalWrite(RED, 1);
+    digitalWrite(GREEN, 0);
+    digitalWrite(BLUE, 0);
+    
+    delay(500);
+    
+    //LED OFF
+    digitalWrite(RGBLEDPOWER,0);
+    digitalWrite(RED, 0);
+    digitalWrite(GREEN, 0);
+    digitalWrite(BLUE, 0);
+    
+    delay(500);
+}</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><b>(3) 동작 코드</b></p>
+<pre id="code_1721787422108" class="cpp" data-ke-language="cpp" data-ke-type="codeblock"><code>while (1)
+	{
+		if(humandetect == 1)
+        {
+            printf("Detect %d\n", eventCounter);
+            humandetect = 0;
+            while (digitalRead(MOTION))
+            {
+            	printf("high %d\n", counter++);
+        		digitalWrite(BUZZER, 1);
+                
+                redLedBlink();
+                redLedBlink();
+                redLedBlink();
+                
+                takePicture();
+                
+                redLedBlink();
+                redLedBlink();
+                redLedBlink();
+                
+                digitalWrite(BUZZER,0);
+             }
+             	counter = 0;
+                }
+                else
+                {
+                	printf("No detect\n")
+                }
+                delay(100);
+             }
+             return 0;
+           }</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b>- 시연 사진</b></p>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_그림1.jpg"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size18"><b>- 시연 영상</b></p>
+<div class="iframe-wrap">
+    <iframe width="640" height="360" src="https://play-tv.kakao.com/embed/player/cliplink/448363762?service=daum_tistory" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+</div>
+<p data-ke-size="size16">&nbsp;</p>
+                        </div>
+                        <br/>
+                        <div class="tags">
+                            #코드 #개발 #임베디드 #개발자 #텀 프로젝트 #임베디드시스템 #라즈베리 파이 #경비 시스템 만들기 #파이캠 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
