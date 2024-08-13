@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -122,7 +123,6 @@
                     <h3>모바일 QR코드 기반 헬스 머신 시뮬레이션 제안</h3>
                     <a href="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&control_no=621f40d09bb6added18150b21a227875&keyword=%EB%AA%A8%EB%B0%94%EC%9D%BC%20QR%EC%BD%94%EB%93%9C%20%ED%97%AC%EC%8A%A4%EB%A8%B8%EC%8B%A0" class="btn" target="_blank">View Paper</a>
                 </div>
-                <!-- More papers can be added here -->
             </div>
         </div>
     </section>
@@ -130,18 +130,38 @@
     <section id="projects">
         <div class="container">
             <h2>My Projects</h2>
+            <div class="category-buttons">
+                <button class="btn" onclick="filterProjects('capstone', '캡스톤 디자인')">캡스톤 디자인</button>
+                <button class="btn" onclick="filterProjects('term', '텀프로젝트')">텀프로젝트</button>
+                <button class="btn" onclick="filterProjects('personal', '개인 작업물')">개인 작업물</button>
+            </div>
+            <div class="project-title" id="project-title">캡스톤 디자인</div>
             <div class="project-grid">
-                <!-- Example Project -->
-                <div class="project">
-                    <h3>Project Name</h3>
-                    <p>Description of the project...</p>
-                    <a href="#" class="btn">View Project</a>
+                <!-- Capstone Design Project -->
+                <div class="project capstone">
+                    <img src="164/img/edited_K-001.png" alt="Capstone Project 1" class="project-img">
+                    <h3>Unity Photon2 Engine을 이용한 멀티플레이 플랫폼 게임 구현(Photon연결)</h3>
+                    <p>Photon의 장점: 최대 20명까지 동시접속 가능...</p>
+                    <a href="164/164.html" class="btn">View Project</a>
                 </div>
-                <!-- More projects can be added here -->
+                <!-- Term Project -->
+                <div class="project term">
+                    <img src="164/img/term_project_img.png" alt="Term Project 1" class="project-img">
+                    <h3>Term Project Title</h3>
+                    <p>Term Project description...</p>
+                    <a href="164/term_project.html" class="btn">View Project</a>
+                </div>
+                <!-- Personal Project -->
+                <div class="project personal">
+                    <img src="164/img/personal_project_img.png" alt="Personal Project 1" class="project-img">
+                    <h3>Personal Project Title</h3>
+                    <p>Personal Project description...</p>
+                    <a href="164/personal_project.html" class="btn">View Project</a>
+                </div>
             </div>
         </div>
     </section>
-
+    
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -160,15 +180,6 @@
         </div>
     </footer>
 
-    <script>
-        function toggleContent(contentId) {
-            var content = document.getElementById(contentId);
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
