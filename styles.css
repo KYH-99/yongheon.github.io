@@ -486,7 +486,7 @@ footer p {
 .project-grid {
     display: flex;
     flex-wrap: wrap; /* 여러 줄에 걸쳐 배치할 수 있도록 설정 */
-    justify-content: center; /* 중앙 정렬 */
+    justify-content: space-between; /* 중앙 정렬 */
     gap: 20px; /* 프로젝트들 사이의 간격 */
     padding: 20px;
 }
@@ -496,10 +496,9 @@ footer p {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: 300px; /* 각 프로젝트의 최소 너비를 설정 */
+    flex: 1 1 calc(33.333% - 20px); /* 3등분을 위한 설정 */
     box-sizing: border-box;
-    flex: 1 1 calc(33% - 40px); /* 3개의 아이템이 한 줄에 표시되도록 설정 */
-    margin: 10px;
+    margin: 10px; /* 각 프로젝트 사이에 간격 추가 */
 }
 
 .project-img {
@@ -555,4 +554,29 @@ img {
     .project {
         width: calc(100% - 40px); /* 더 작은 화면에서는 하나씩 배치 */
     }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 화면이 작아지면 2열로 변경 */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* 더 작아지면 1열로 변경 */
+    }
+}
+
+.project {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 마우스 오버 시 애니메이션 효과 추가 */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* 마우스 오버 시 위로 살짝 올라감 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 마우스 오버 시 그림자 강화 */
 }
