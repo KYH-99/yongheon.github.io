@@ -317,8 +317,10 @@ section {
 
 .project-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 여러 줄에 걸쳐 배치할 수 있도록 설정 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px; /* 프로젝트들 사이의 간격 */
+    padding: 20px;
 }
 
 .project {
@@ -396,8 +398,10 @@ footer p {
 
 .project-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* 여러 줄에 걸쳐 배치할 수 있도록 설정 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px; /* 프로젝트들 사이의 간격 */
+    padding: 20px;
 }
 
 .paper {
@@ -480,8 +484,8 @@ footer p {
 
 .project-grid {
     display: flex;
-    flex-wrap: nowrap; /* 한 줄에 배치되도록 설정 */
-    overflow-x: auto; /* 가로 스크롤을 가능하게 설정 */
+    flex-wrap: wrap; /* 여러 줄에 걸쳐 배치할 수 있도록 설정 */
+    justify-content: center; /* 중앙 정렬 */
     gap: 20px; /* 프로젝트들 사이의 간격 */
     padding: 20px;
 }
@@ -493,8 +497,8 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-width: 300px; /* 각 프로젝트의 최소 너비를 설정 */
     box-sizing: border-box;
-    flex: 0 0 auto; /* 프로젝트 아이템의 크기를 고정 */
-    margin: 0;
+    flex: 1 1 calc(33% - 40px); /* 3개의 아이템이 한 줄에 표시되도록 설정 */
+    margin: 10px;
 }
 
 .project-img {
@@ -520,6 +524,16 @@ footer p {
 
 .project .btn:hover {
     background: #555;
+}
+
+/* 이미지가 없는 경우 텍스트를 수직 및 수평 가운데 정렬 */
+.project.no-image {
+    justify-content: center;
+    text-align: center;
+}
+
+.project.no-image .btn {
+    margin-top: 15px;
 }
 
 img {
