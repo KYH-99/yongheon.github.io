@@ -7,6 +7,7 @@ body {
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden;
+    background-color: #f5f5f7; /* 밝은 회색 배경 */
 }
 
 header {
@@ -38,18 +39,10 @@ header {
     left: 0;
     padding-left: 100px;
     opacity: .08;
-    /* 지직거리는 배경 이미지 삭제 */
-    /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/scratch.png') repeat center center; */
-    /* 애니메이션 삭제 */
-    /* -webkit-animation: scratch 0.45s steps(1) infinite; */
-    /* animation: scratch 0.45s steps(1) infinite; */
 }
 
 .inner-scratch:after {
     left: 30%;
-    /* 애니메이션 삭제 */
-    /* -webkit-animation: inner-scratch 2s infinite; */
-    /* animation: inner-scratch 2s infinite; */
 }
 
 .grain:after {
@@ -60,11 +53,6 @@ header {
     top: -5%;
     left: -5%;
     opacity: .11;
-    /* 지직거리는 배경 이미지 삭제 */
-    /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg') repeat center center; */
-    /* 애니메이션 삭제 */
-    /* -webkit-animation: grain 0.5s steps(1) infinite; */
-    /* animation: grain 0.5s steps(1) infinite; */
 }
 
 /*  Basic Title  */
@@ -111,176 +99,6 @@ h1 span:after {
     animation: 2.5s draw-bottom;
 }
 
-/* Film Animations */
-@keyframes grain {
-    0%, 100% {
-        transform: translate(0, 0, 0);
-    }
-
-    10% {
-        transform: translate(-1%, -1%);
-    }
-
-    20% {
-        transform: translate(1%, 1%);
-    }
-
-    30% {
-        transform: translate(-2%, -2%);
-    }
-
-    40% {
-        transform: translate(3%, 3%);
-    }
-
-    50% {
-        transform: translate(-3%, -3%);
-    }
-
-    60% {
-        transform: translate(4%, 4%);
-    }
-
-    70% {
-        transform: translate(-4%, -4%);
-    }
-
-    80% {
-        transform: translate(2%, 2%);
-    }
-
-    90% {
-        transform: translate(-3%, -3%);
-    }
-}
-
-/* Quick Scratches */
-@keyframes scratch {
-    0%, 100% {
-        transform: translateX(0);
-        opacity: 0.075;
-    }
-
-    10% {
-        transform: translateX(-1%);
-    }
-
-    20% {
-        transform: translateX(1%);
-    }
-
-    30% {
-        transform: translateX(-2%);
-        opacity: 0.09;
-    }
-
-    40% {
-        transform: translateX(3%);
-    }
-
-    50% {
-        transform: translateX(-3%);
-        opacity: 0.05;
-    }
-
-    60% {
-        transform: translateX(8%);
-    }
-
-    70% {
-        transform: translateX(-3%);
-    }
-
-    80% {
-        transform: translateX(10%);
-        opacity: 0.02;
-    }
-
-    90% {
-        transform: translateX(-2%);
-    }
-}
-
-/* Long Scratches */
-@keyframes inner-scratch {
-    0% {
-        transform: translateX(0);
-        opacity: 0.08;
-    }
-
-    10% {
-        transform: translateX(-1%);
-    }
-
-    20% {
-        transform: translateX(1%);
-    }
-
-    30% {
-        transform: translateX(-2%);
-    }
-
-    40% {
-        transform: translateX(3%);
-    }
-
-    50% {
-        transform: translateX(-3%);
-        opacity: 0.06;
-    }
-
-    60% {
-        transform: translateX(8%);
-    }
-
-    70% {
-        transform: translateX(-3%);
-    }
-
-    80% {
-        transform: translateX(10%);
-        opacity: 0.03;
-    }
-
-    90% {
-        transform: translateX(20%);
-    }
-
-    100% {
-        transform: translateX(30%);
-    }
-}
-
-@keyframes draw {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 110%;
-    }
-}
-
-@keyframes draw-bottom {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 /* General Styling */
 nav {
     text-align: center;
@@ -301,6 +119,13 @@ nav ul li a {
     color: #333;
     text-decoration: none;
     font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
 }
 
 .container {
@@ -310,6 +135,7 @@ nav ul li a {
 
 section {
     padding: 60px 0;
+    background-color: #f5f5f7; /* 섹션 배경색도 밝은 회색으로 설정 */
 }
 
 #about, #projects, #contact {
@@ -324,8 +150,8 @@ section {
     padding: 20px;
 }
 
-.project {
-    background: #f4f4f4;
+.project, .paper {
+    background: #ffffff; /* 프로젝트와 논문 박스 배경을 흰색으로 설정 */
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
@@ -333,22 +159,23 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.project h3 {
+.project h3, .paper h3 {
     margin-top: 0;
 }
 
-.project .btn {
+.project .btn, .paper .btn {
     display: inline-block;
-    background: #333;
+    background: #3498db; /* 파란색 버튼 */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
-.project .btn:hover {
-    background: #555;
+.project .btn:hover, .paper .btn:hover {
+    background: #2980b9; /* 버튼 호버 시 조금 더 어두운 파란색 */
 }
 
 .social-links {
@@ -406,7 +233,7 @@ footer p {
 }
 
 .paper {
-    background: #f4f4f4;
+    background: #ffffff; /* 논문 박스 배경 흰색 */
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
@@ -426,7 +253,7 @@ footer p {
 
 .paper .btn {
     display: inline-block;
-    background: #333;
+    background: #3498db;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -435,7 +262,7 @@ footer p {
 }
 
 .paper .btn:hover {
-    background: #555;
+    background: #2980b9;
 }
 
 #projects {
@@ -457,7 +284,7 @@ footer p {
 .category-buttons .btn {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #3498db;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -465,7 +292,7 @@ footer p {
 }
 
 .category-buttons .btn:hover {
-    background-color: #555;
+    background-color: #2980b9;
 }
 
 .project-title {
@@ -485,20 +312,20 @@ footer p {
 
 .project-grid {
     display: flex;
-    flex-wrap: wrap; /* 여러 줄에 걸쳐 배치할 수 있도록 설정 */
-    justify-content: space-between; /* 중앙 정렬 */
-    gap: 20px; /* 프로젝트들 사이의 간격 */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
     padding: 20px;
 }
 
 .project {
-    background: #f4f4f4;
+    background: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 20px); /* 3등분을 위한 설정 */
+    flex: 1 1 calc(33.333% - 20px);
     box-sizing: border-box;
-    margin: 10px; /* 각 프로젝트 사이에 간격 추가 */
+    margin: 10px;
 }
 
 .project-img {
@@ -515,16 +342,17 @@ footer p {
 
 .project .btn {
     display: inline-block;
-    background: #333;
+    background: #3498db;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 .project .btn:hover {
-    background: #555;
+    background: #2980b9;
 }
 
 /* 이미지가 없는 경우 텍스트를 수직 및 수평 가운데 정렬 */
@@ -540,8 +368,8 @@ footer p {
 img {
     max-width: 100% !important;
     height: auto !important;
-    display: block; /* 이미지를 블록 요소로 설정하여 여백을 제거 */
-    margin: 0 auto; /* 이미지를 중앙에 정렬 */
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -556,27 +384,16 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 화면이 작아지면 2열로 변경 */
-    }
+/* 섹션 숨기기/보이기 애니메이션 */
+section {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none; /* 기본적으로 모든 섹션을 숨김 */
 }
 
-@media (max-width: 480px) {
-    .project-grid {
-        grid-template-columns: 1fr; /* 더 작아지면 1열로 변경 */
-    }
-}
-
-.project {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 마우스 오버 시 애니메이션 효과 추가 */
-}
-
-.project:hover {
-    transform: translateY(-5px); /* 마우스 오버 시 위로 살짝 올라감 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 마우스 오버 시 그림자 강화 */
+section.active {
+    display: block; /* 활성화된 섹션만 표시 */
+    opacity: 1;
+    transform: scale(1);
 }
