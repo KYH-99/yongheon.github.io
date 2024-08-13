@@ -25,6 +25,6 @@
 - 깃허브 : <a href="">
   <img src="https://user-images.githubusercontent.com/68724828/185908612-22f4d219-78a7-4de7-bb02-deecaa63bffa.png" height="28px" style="margin-top: 10px" />
   </a>
-- 깃허브 페이지 : <a href="https://kyh-99.github.io/KwonYongheon.github.io/">
+- 깃허브 페이지 : <a href="">
   <img src="https://user-images.githubusercontent.com/68724828/185908612-22f4d219-78a7-4de7-bb02-deecaa63bffa.png" height="28px" style="margin-top: 10px" />
   </a>
