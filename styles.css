@@ -1,103 +1,98 @@
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header .container {
+header.hero {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-header a {
-    color: #fff;
+header.hero h1 a {
+    color: #ffffff;
+    font-size: 48px;
     text-decoration: none;
-    font-size: 1.5em;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 18px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-section {
-    padding: 60px 0;
-}
-
-#about, #projects, #contact {
+.dark-section {
+    background-color: #222222;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.dark-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .project-grid {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .project {
-    background: #f4f4f4;
+    background-color: #333333;
     padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    width: calc(33% - 40px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 300px;
 }
 
 .project h3 {
-    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.project .btn {
+.btn {
     display: inline-block;
-    background: #333;
-    color: #fff;
     padding: 10px 20px;
+    background-color: #ff6600;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.project .btn:hover {
-    background: #555;
+.btn:hover {
+    background-color: #ff4500;
+}
+
+.dark-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
 }
 
 .social-links a {
-    color: #333;
+    color: #ffffff;
     margin: 0 10px;
-    font-size: 1.5em;
+    font-size: 24px;
     text-decoration: none;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer p {
-    margin: 0;
+.social-links a:hover {
+    color: #ff6600;
 }
