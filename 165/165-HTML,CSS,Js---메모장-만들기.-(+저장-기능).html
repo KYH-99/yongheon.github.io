@@ -1,0 +1,224 @@
+
+<meta charset="utf-8">
+<html lang="ko">
+<head>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .wrap-right {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .title-article {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    
+        .box-info {
+            text-align: center;
+            color: #777;
+        }
+    
+        .article-view {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .article-view h2,
+        .article-view h4 {
+            font-size: 1.5em;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+    
+        .article-view p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+    
+        .article-view img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        @media (max-width: 768px) {
+            .wrap-right {
+                padding: 10px;
+            }
+    
+            .title-article {
+                font-size: 1.5em;
+            }
+    
+            .article-view {
+                padding: 15px;
+            }
+    
+            .article-view h2,
+            .article-view h4 {
+                font-size: 1.2em;
+            }
+    
+            .article-view p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./../style.css" />
+    <title>HTML,CSS,Js - 메모장 만들기. (+저장 기능)</title>
+</head>
+<body id="tt-body-page" class="">
+<div id="wrap" class="wrap-right">
+    <div id="container">
+        <main class="main ">
+            <div class="area-main">
+                <div class="area-view">
+                    <div class="article-header">
+                        <div class="inner-article-header">
+                            <div class="box-meta">
+                                <h2 class="title-article">HTML,CSS,Js - 메모장 만들기. (+저장 기능)</h2>
+                                <div class="box-info">
+                                    <p class="category">참여: 권용헌, 주윤성</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="article-view">
+                        <div class="contents_style">
+                            <h1>디지털 시계</h1>
+                            <h2 data-ke-size="size18"><b>- 사용템플릿</b></h2>
+<p data-ke-size="size16"><b>(1) Visual Studio Code</b></p>
+<p data-ke-size="size16"><b>(2) Github</b><br/><p><b>(3) Netlify</b></p><br>
+<h2 data-ke-size="size18"><b>- 완성된 사이트 주소&nbsp; &nbsp;</b></h2>
+<p data-ke-size="size16"><a href="https://warm-wisp-80c7da.netlify.app/">사이트 접속하기</a></p>
+<figure id="og_1721959644061" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="website" data-og-title="간단한 메모장" data-og-description="간단한 메모장 제목 메모 저장 전체 지우기 저장된 메모" data-og-host="warm-wisp-80c7da.netlify.app" data-og-source-url="https://warm-wisp-80c7da.netlify.app/" data-og-url="https://warm-wisp-80c7da.netlify.app/" data-og-image=""><a href="https://warm-wisp-80c7da.netlify.app/" target="_blank" rel="noopener" data-source-url="https://warm-wisp-80c7da.netlify.app/">
+
+</div>
+</a></figure>
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size18"><b>- 완성화면</b></h2>
+<h3 data-ke-size="size16"><b>(1) 시작화면</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-001.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(2) 메모 입력화면</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-002.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(3) 저장화면</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-003.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(4) 내 컴퓨터에 저장 화면</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-004.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(5) 저장된 모습(메모장 사이즈에 맞게 저장)</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-005.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size18"><b>- 핵심 코드 설명</b></h2>
+
+<h3 data-ke-size="size16"><b>(1) HTML 부분</b></h3>
+<pre id="code_1721960057843" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code>&lt;!-- 메모 제목 입력 필드 --&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="noteTitle" class="form-label"&gt;제목&lt;/label&gt;
+                &lt;input type="text" class="form-control" id="noteTitle" placeholder="제목을 입력하세요"&gt;
+            &lt;/div&gt;
+            &lt;!-- 메모 내용 입력 필드 --&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="noteInput" class="form-label"&gt;메모&lt;/label&gt;
+                &lt;textarea class="form-control" id="noteInput" rows="5" placeholder="메모를 입력하세요"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;!-- 저장 및 전체 지우기 버튼 --&gt;
+            &lt;div class="d-flex justify-content-between"&gt;
+                &lt;button id="saveButton" class="btn btn-primary flex-grow-1 me-2"&gt;저장&lt;/button&gt;
+                &lt;button id="clearAllButton" class="btn btn-secondary flex-grow-1"&gt;전체 지우기&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;!-- 저장된 메모 목록 --&gt;
+            &lt;h2 class="mt-5 mb-4 text-center"&gt;저장된 메모&lt;/h2&gt;
+            &lt;div id="savedNotes" class="mt-3"&gt;&lt;/div&gt;</code></pre>
+<h3 data-ke-size="size16"><br /><b>(2) CSS 부분</b></h3>
+<pre id="code_1721960110798" class="css" data-ke-language="css" data-ke-type="codeblock"><code>/* 삭제 및 저장 버튼 스타일 */
+.delete-button, .download-button {
+    position: relative;
+}
+
+/* 저장 버튼 위치 조정 */
+.download-button {
+    order: -1; /* 저장 버튼을 삭제 버튼 왼쪽으로 이동 */
+}</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(3) Js 부분</b></h3>
+<pre id="code_1721960158227" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// 특정 메모를 PNG 파일로 저장하는 함수
+    window.downloadNoteAsImage = function (index) {
+        const notes = JSON.parse(localStorage.getItem('notes')) || []; // 로컬 스토리지에서 메모 불러오기
+        const note = notes[index]; // 해당 인덱스의 메모 가져오기
+        const noteElement = document.createElement('div'); // 메모 요소 생성
+        noteElement.classList.add('note', note.color); // 메모 요소에 클래스 추가
+        noteElement.style.position = 'absolute'; // 화면에서 보이지 않도록 위치 설정
+        noteElement.style.left = '-9999px';
+        noteElement.innerHTML = `
+            &lt;div class="note-title"&gt;${note.title}&lt;/div&gt;
+            &lt;div class="note-content"&gt;${note.content}&lt;/div&gt;
+        `; // 메모 내용 추가
+        document.body.appendChild(noteElement); // 임시로 메모 요소를 문서에 추가
+        html2canvas(noteElement).then(canvas =&gt; {
+            const link = document.createElement('a'); // 다운로드 링크 생성
+            link.href = canvas.toDataURL('image/png'); // 캔버스를 이미지 데이터로 변환
+            link.download = `${note.title}.png`; // 파일명 설정
+            link.click(); // 다운로드 링크 클릭
+            document.body.removeChild(noteElement); // 임시로 추가한 메모 요소 제거
+        });
+    }</code></pre>
+                        </div>
+                        <br/>
+                        <div class="tags">
+                            #HTML #CSS #개발 #개발자 #자바스크립트 #웹프로그래밍 #JS #부트스트랩 #프론트엔드 #메모장 개발하기 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
