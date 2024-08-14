@@ -1,47 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
+    const preloader = document.getElementById('preloader');
+    const heroButtons = document.querySelectorAll('.hero-buttons button');
 
-    // 초기 상태 설정: 첫 번째 섹션만 활성화
+    // 초기 상태 설정
     sections.forEach(section => {
-        if (section.id !== 'about') {
-            section.classList.remove('active');
-        } else {
-            section.classList.add('active');
+        if (section.id !== 'hero') {
+            section.classList.add('hidden');
         }
     });
 
-    // 네비게이션 링크 클릭 이벤트 처리
+    // 로딩 애니메이션
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // 화면 열기 후 스크롤 허용
+    }, 500); // 0.5초 후 로딩 애니메이션 종료
+
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-
-            // 모든 섹션 비활성화
             sections.forEach(section => {
-                section.classList.remove('active');
+                if (section.id === targetId) {
+                    section.classList.remove('hidden');
+                    if (targetId === 'papers') {
+                        document.querySelectorAll('#papers .paper-item').forEach((item, index) => {
+                            item.style.animationDelay = `${0.1 * index}s`;
+                        });
+                    } else if (targetId === 'career') {
+                        document.querySelectorAll('#career .project-item').forEach((item, index) => {
+                            item.style.animationDelay = `${0.1 * index}s`;
+                        });
+                    }
+                } else {
+                    section.classList.add('hidden');
+                }
             });
+            document.getElementById('hero').classList.add('hidden');
+            document.querySelector(`#${targetId}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-            // 클릭된 링크에 해당하는 섹션만 활성화
-            const targetSection = document.getElementById(targetId);
-            targetSection.classList.add('active');
+    document.getElementById('home-btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        sections.forEach(section => {
+            section.classList.add('hidden');
+        });
+        document.getElementById('hero').classList.remove('hidden');
+        document.getElementById('hero').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 
-            // 섹션 전환 애니메이션
-            setTimeout(() => {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }, 500); // 전환 애니메이션 시간(500ms)을 고려해 설정
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-target');
+            sections.forEach(section => {
+                if (section.id === targetId) {
+                    section.classList.remove('hidden');
+                    if (targetId === 'papers') {
+                        document.querySelectorAll('#papers .paper-item').forEach((item, index) => {
+                            item.style.animationDelay = `${0.1 * index}s`;
+                        });
+                    } else if (targetId === 'career') {
+                        document.querySelectorAll('#career .project-item').forEach((item, index) => {
+                            item.style.animationDelay = `${0.1 * index}s`;
+                        });
+                    }
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+            document.getElementById('hero').classList.add('hidden');
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 });
-
-
-function toggleContent(contentId) {
-    var content = document.getElementById(contentId);
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-    } else {
-        content.style.display = "none";
-    }
-}
