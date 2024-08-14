@@ -110,4 +110,53 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(targetCategory).classList.add('active');
         });
     });
+
+    // Glitch Timeline Function
+var $text = document.querySelectorAll('.hero-buttons button'),
+$filter = document.querySelector('.svg-sprite'),
+$turb = $filter.querySelector('#filter feTurbulence'),
+turbVal = { val: 0.000001 },
+turbValX = { val: 0.000001 };
+
+var glitchTimeline = function($text) {
+var timeline = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 2,
+    paused: true,
+    onUpdate: function () {
+        $turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+    }
+});
+
+timeline
+    .to(turbValX, { duration: 0.1, val: 0.5 })
+    .to(turbVal, { duration: 0.1, val: 0.02 })
+    .set(turbValX, { val: 0.000001 })
+    .set(turbVal, { val: 0.000001 })
+    .to(turbValX, { duration: 0.2, val: 0.4 }, 0.4)
+    .to(turbVal, { duration: 0.2, val: 0.002 }, 0.4)
+    .set(turbValX, { val: 0.000001 })
+    .set(turbVal, { val: 0.000001 });
+
+return {
+    start: function() {
+        timeline.play(0);
+    },
+    stop: function() {
+        timeline.pause();
+    }
+};
+};
+
+document.querySelectorAll('.hero-buttons button')
+.forEach(button => {
+    var btnGlitch = new glitchTimeline(button);
+    button.addEventListener('mouseenter', function () {
+        btnGlitch.start();
+    });
+
+    button.addEventListener('mouseleave', function () {
+        btnGlitch.stop();
+    });
+});
 });
