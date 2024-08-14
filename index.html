@@ -3,252 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KYH labs</title>
+    <title>freezino labs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="preloader">
         <div id="loader"></div>
     </div>
+
     <header>
         <nav>
             <ul>
-                <li><a href="#hero" id="home-btn"><img src="home-icon.png" /></a></li>
+                <li><a href="#hero" id="home-btn"><img src="home-icon.png" alt="홈" /></a></li>
                 <li><a href="#papers" class="nav-link">Thesis</a></li>
-                <li><a href="#career" class="nav-link">Projects</a></li>
-                <li><a href="#study" class="nav-link">Completion</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#etc" class="nav-link">Etc</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#Etc" class="nav-link">Etc</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="hero">
-            <div class='box'>
-                <div class='title'>Hello, world!</div>
-                <div class='wave -one'></div>
-                <div class='wave -two'></div>
-                <div class='wave -three'></div>
-
+            <div class="box">
+                <div class="title">freezino labs</div>
+                <div class="wave -one"></div>
+                <div class="wave -two"></div>
+                <div class="wave -three"></div>
             </div>
-            <p>Kwon Yongheon | Portfolio</p>
+            
+            <p>Give inspiration</p>
+
+
+
+
+
+            <!--ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ-->
             <div class="hero-buttons">
-                <button data-target="papers">학술논문</button>
-                <button data-target="career">프로젝트</button>
+                <button data-target="papers">발표논문</button>
+                <button data-target="projects">프로젝트</button>
+                <button data-target="certificates">자격증</button>
+                <button data-target="etc">기타</button>
                 <button data-target="about">소개</button>
             </div>
+            <!--ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ-->
+        </section>
+        <section id="papers">
+            <h2>발표논문</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="kiice">한국정보통신학회</button>
+                <button class="tab-btn" data-tab="kocon">한국콘텐츠학회</button>
+            </div>
+            <div id="kiice" class="tab-content active">
+                <!-- 한국정보통신학회 논문들 -->
+                <div class="paper-item">
+                    <div class="paper-title">심박수 측정 웨어러블 디바이스를 활용한 졸음운전 예방 앱 제안</div>
+                    <div class="paper-subtitle">Proposal of an app to prevent drowsy driving using a wearable device for heart rate measurement</div>
+                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09371858" class="paper-link" target="_blank">Link</a>
+                </div>
+                <div class="paper-item">
+                    <div class="paper-title">심박수 측정 웨어러블 디바이스를 활용한 졸음운전 예방 앱 제안</div>
+                    <div class="paper-subtitle">Proposal of an app to prevent drowsy driving using a wearable device for heart rate measurement</div>
+                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09371858" class="paper-link" target="_blank">Link</a>
+                </div>
+                <!-- 추가 논문 항목들... -->
+            </div>
+            <div id="kocon" class="tab-content">
+                <!-- 한국콘텐츠학회 논문들 -->
+                <div class="paper-item">
+                    <div class="paper-title">VR360 기반 아동 체험교육용 콘텐츠 사례</div>
+                    <div class="paper-subtitle">VR360-based content for children’s experience education</div>
+                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11415356" class="paper-link" target="_blank">Link</a>
+                </div>
+                <div class="paper-item">
+                    <div class="paper-title">VR360 기반 아동 체험교육용 콘텐츠 사례</div>
+                    <div class="paper-subtitle">VR360-based content for children’s experience education</div>
+                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11415356" class="paper-link" target="_blank">Link</a>
+                </div>
+                <div class="paper-item">
+                    <div class="paper-title">VR360 기반 아동 체험교육용 콘텐츠 사례</div>
+                    <div class="paper-subtitle">VR360-based content for children’s experience education</div>
+                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11415356" class="paper-link" target="_blank">Link</a>
+                </div>
+                <!-- 추가 논문 항목들... -->
+            </div>
         </section>
 
-        <section id="papers" class="hidden">
-            <h2>학술논문</h2>
-            <ul class="papers-list">
-                <li class="paper-item">
-                    <div class="paper-title">웹디자인 수준에 따른 온라인 오픈마켓 판매성과 분석</div>
-                    <div class="paper-subtitle">Analysis of Online Open Market Sales Performance Based on Web Design Quality | 한국콘텐츠학회 2024 종합학술대회</div>
-                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11797072" class="paper-link" target="_blank">Link</a>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-title">AR 기반 성형 결과 예측 시스템</div>
-                    <div class="paper-subtitle">AR-based Cosmetic Surgery Result Prediction System | 한국콘텐츠학회 2024 종합학술대회</div>
-                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11797068" class="paper-link" target="_blank">Link</a>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-title">생성형 AI를 활용한 온라인 쇼핑몰의 안경 착용 시뮬레이션 제안</div>
-                    <div class="paper-subtitle">A proposal for a simulation of wearing glasses in an online shopping mall using Generative AI | 한국콘텐츠학회 2024 종합학술대회</div>
-                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11797066" class="paper-link" target="_blank">Link</a>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-title">강화학습 기반 게임 플레이 피드백 시스템 제안</div>
-                    <div class="paper-subtitle">Proposed game play feedback system based on reinforcement learning | 한국콘텐츠학회 2024 종합학술대회</div>
-                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11797067" class="paper-link" target="_blank">Link</a>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-title">모바일 QR코드 기반 헬스 머신 시뮬레이션 제안</div>
-                    <div class="paper-subtitle">Proposed Health Machine Simulation Based on Mobile QR Code | 한국콘텐츠학회 2024 종합학술대회</div>
-                    <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11797075" class="paper-link" target="_blank">Link</a>
-                </li>
-                <!-- 더 많은 논문 항목을 추가할 수 있습니다 -->
-            </ul>
-        </section>
-
-        <section id="career" class="hidden">
+        <section id="projects">
             <h2>프로젝트</h2>
-            <!-- --------------------------------------------------------------------------------------- -->
-            <div class="category">
-                <h3>캡스톤 디자인</h3>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <div class="project-title">Jumper-(1)</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | CUP Capstone design</div>
-                        <div class="project-description">
-                            <p>Unity Photon2 Engine을 이용한 멀티플레이 플랫폼 게임 구현(기획)</p>
-                            <p>(동작, 기능, 전체적인 시스템 계획)</p>
-                        </div>
-                        <a href="157/157.html" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Jumper-(2)</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | CUP Capstone design</div>
-                        <div class="project-description">
-                            <p>Unity Photon2 Engine을 이용한 멀티플레이 플랫폼 게임 구현(Photon연결)</p>
-                            <p>(Photon의 장점: 최대 20명까지 동시접속 가능)</p>
-                        </div>
-                        <a href="164/164.html" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Jumper-(3)</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | CUP Capstone design</div>
-                        <div class="project-description">
-                            <p>Unity Photon2 Engine을 이용한 멀티플레이 플랫폼 게임 구현</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="161/161.html" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- 더 많은 프로젝트를 추가할 수 있습니다 -->
-                </div>
+            <div class="project-tabs">
+                <button class="project-tab-btn active" data-category="game">Game</button>
+                <button class="project-tab-btn" data-category="web">Web</button>
+                <button class="project-tab-btn" data-category="tech">Tech Dev</button>
             </div>
-            <!-- --------------------------------------------------------------------------------------- -->
-            <div class="category">
-                <h3>해커톤</h3>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <div class="project-title">Self Dr.</div>
-                        <div class="project-photo">
-                            <img src="pj01.png" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2018 | 4D-CROSS MEDICAL HACK | Team simpsons</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Jumper extream+</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | BDIA Dev-ton</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">CUP SW</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | 벤처스타트업 아카데미 서퍼톤</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- 더 많은 프로젝트를 추가할 수 있습니다 -->
+
+            <div id="game" class="project-content active">
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">Self Dr.</div>
+                    <div class="project-subtitle">2018 | 4D-CROSS MEDICAL HACK | Team simpsons</div>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
-            </div>
-            <!-- --------------------------------------------------------------------------------------- -->
-            <div class="category">
-                <h3>텀 프로젝트</h3>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <div class="project-title">Elder Helper</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">4D-CROSS MEDICAL HACK</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">CUP SW</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">2024 | 벤처스타트업 아카데미 서퍼톤</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Human body detection security system-(1)</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">Raspberry-Pi를 사용한 임베디드 시스템 텀-프로젝트</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Human body detection security system-(2)</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">Raspberry-Pi를 사용한 임베디드 시스템 텀-프로젝트</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- --------------------------------------------------------------------------------------- -->
-                    <div class="project-item">
-                        <div class="project-title">Server Chat</div>
-                        <div class="project-photo">
-                            <img src="#" alt="프로젝트 사진">
-                        </div>
-                        <div class="priject-subtitile">4D-CROSS MEDICAL HACK</div>
-                        <div class="project-description">
-                            <p>-</p>
-                            <p>(전체적인 개발 과정 요약)</p>
-                        </div>
-                        <a href="#" class="project-link" target="_blank">바로가기</a>
-                    </div>
-                    <!-- 더 많은 프로젝트를 추가할 수 있습니다 -->
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">Self Dr.</div>
+                    <div class="project-subtitle">2018 | 4D-CROSS MEDICAL HACK | Team simpsons</div>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">Self Dr.</div>
+                    <div class="project-subtitle">2018 | 4D-CROSS MEDICAL HACK | Team simpsons</div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <!-- 다른 게임 프로젝트 항목 추가 가능 -->
             </div>
-            <!-- --------------------------------------------------------------------------------------- -->  
-        </section>
-        <section id="study" class="hidden">
-            <h2>학습</h2>
-            <p>ㅁㄴㅇㅁㅇㄴㅇㄴㅁㅁㅇㄴ</p>
+            <div id="web" class="project-content">
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">132132132.</div>
+                    <div class="project-subtitle">2018 | 4D-CROSS1421412 simpsons</div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">132132132.</div>
+                    <div class="project-subtitle">2018 | 4D-CROSS1421412 simpsons</div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <!-- 다른 웹 프로젝트 항목 추가 가능 -->
+            </div>
+            <div id="tech" class="project-content">
+                <div class="project-item">
+                    <div class="project-photo"><img src="pj01.png" alt="프로젝트 사진"></div>
+                    <div class="project-title">Se554325432354.</div>
+                    <div class="project-subtitle">2018 | 4D-CR124psons</div>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <!-- 다른 기술 개발 프로젝트 항목 추가 가능 -->
+            </div>
         </section>
 
-        <section id="about" class="hidden">
-            <h2>About Me</h2>
+
+        <section id="certificates">
+            <h2>자격증 및 수료증</h2>
+            <div class="certificate-grid">
+                <div class="certificate-item">
+                    <img src="certificate1.png" alt="자격증 사진">
+                    <div class="certificate-title">AWS Certified Solutions Architect</div>
+                </div>
+                <div class="certificate-item">
+                    <img src="certificate2.png" alt="자격증 사진">
+                    <div class="certificate-title">Certified Ethical Hacker</div>
+                </div>
+                <!-- 추가 자격증 항목들... -->
+            </div>
+        </section>
+
+        <section id="etc">
+            <h2>기타 활동</h2>
+            <div class="etc-grid">
+                <div class="etc-item">
+                    <div class="etc-photo"><img src="etc1.png" alt="활동 사진"></div>
+                    <div class="etc-title">활동 제목 1</div>
+                    <div class="etc-subtitle">활동 부제목 1</div>
+                    <div class="etc-hover-content">자세한 내용 1</div>
+                </div>
+                <div class="etc-item">
+                    <div class="etc-photo"><img src="etc2.png" alt="활동 사진"></div>
+                    <div class="etc-title">활동 제목 2</div>
+                    <div class="etc-subtitle">활동 부제목 2</div>
+                    <div class="etc-hover-content">자세한 내용 2</div>
+                </div>
+                <div class="etc-item">
+                    <div class="etc-photo"><img src="etc2.png" alt="활동 사진"></div>
+                    <div class="etc-title">활동 제목 2</div>
+                    <div class="etc-subtitle">활동 부제목 2</div>
+                    <div class="etc-hover-content">자세한 내용 2</div>
+                </div>
+                <div class="etc-item">
+                    <div class="etc-photo"><img src="etc2.png" alt="활동 사진"></div>
+                    <div class="etc-title">활동 제목 2</div>
+                    <div class="etc-subtitle">활동 부제목 2</div>
+                    <div class="etc-hover-content">자세한 내용 2</div>
+                </div>
+                <!-- 추가 기타 항목들... -->
+            </div>
+        </section>
+
+        <section id="about">
             <div class="profile-container">
                 <img src="profile-pic.png" alt="Profile Picture" class="profile-picture">
-                <h3>부산가톨릭대학교, 권용헌</h3>
-                <p>2025. 02 졸업예정</p>
-                <p>contact with dydgjs9920@naver.com</p>
+                <h2>주윤성</h2>
+                <h3>부산가톨릭대학교</h3>
+                <h4>소프트웨어전공, 멀티미디어콘텐츠 부전공</h4>
+                <p>2025. 03 졸업예정</p>
+                <p>contact with freezino@kakao.com</p>
+            </div>
+            <hr class="divider">
+            <div class="about-content">
+                <h3>...</h3>
+                <p>
+                    저는 컴퓨터를 4살 때부터 했습니다. 키보드를 통해 한글과 영어를 배웠고, 유치원 시절에 온라인 게임을 하면서, 전 세계에 있는 사람들과 실시간으로 같이 만난다는 것이 너무 흥미롭고 신기했습니다. <br />이것을 계기로, 네트워크에 관심이 생겼고, 어떻게 구성되어서 어떻게 통신이 이루어지는지 찾아보곤 했습니다. <br />중학교에 진학해서는, 해킹과 보안 쪽으로도 관심이 생겨, 단체 모의 해킹과 해킹 대응 커뮤니티에서 활동하기도 했습니다. <br />이때 처음으로 리눅스와 백 트랙을 공부했었습니다. 이런 식으로 저는 종합적인 컴퓨터에 관한 관심으로, 조금씩 장래희망을 단순히 '프로그래머'라고 정하고, 지금 제가 있는 소프트웨어학과에 진학하게 되었고, <br />대학교에서 벤처스타트업 아카데미 프로그램에 참여하면서 클라우드 컴퓨팅과 인공지능에 대한 실질적인 경험을 쌓고, 전공과의 연계를 통해 자기 계발에 많은 성장을 이루었습니다. <br />또한, 여유가 되는 시간에는, 코딩학원에서 시간강사로 활동하며 미래의 대학생들에게 C언어, 파이썬, 아두이노, 앱 인벤터, 블록코딩을 강의하고있습니다.
+                </p>
             </div>
             <hr class="divider">
             <div class="timeline">
@@ -258,18 +216,15 @@
                     <div class="timeline-content">
                         <h3>[교내]</h3>
                         <ul>
-                            <li>창업동아리 "Inspiration" 동아리원 활동</li>
+                            <li>창업동아리 "Inspiration" 동아리장</li>
                             <li>1학기 우수창업동아리 최우수상 (60만원)</li>
-                            <li>2024 부산가톨릭대학교 창업캠프 과정 수료</li>
+                            <li>2024 벤처스타트업아카데미사업단 참여</li>
                             <li>"Unity Photon2 Engine을 이용한 멀티플레이 플랫포머 게임 구현" 프로젝트 진행</li>
-                            <li>SkillUp 프로그램 - 클라우드 AWS 실습 프로그램 참여</li>
-                            <li>SkillUp 프로그램 - 클라우드 AWS 기반 생성형 AI 실습 프로그램 참여</li>
-                            <li>LevelUP-프론트엔드 프로그래밍 기초역량강화 프로그램 참여</li>
-                            <li>LevelUP-백엔드 프로그래밍 기초역량강화 프로그램 참여</li>
+                            <li>클라우드 AWS 실습 프로그램 참여</li>
+                            <li>클라우드 AWS 기반 생성형 AI 실습 프로그램 참여</li>
                         </ul>
                         <h3>[교외]</h3>
                         <ul>
-                            <li>2024 벤처스타트업아카데미사업단 참여</li>
                             <li>한국콘텐츠학회 2024 종합학술대회 "웹디자인 수준에 따른 온라인 오픈마켓 판매성과 분석" 논문 발표</li>
                             <li>한국콘텐츠학회 2024 종합학술대회 "생성형 AI를 활용한 온라인 쇼핑몰의 안경 착용 시뮬레이션 제안" 논문 발표</li>
                             <li>한국콘텐츠학회 2024 종합학술대회 "모바일 QR코드 기반 헬스 머신 시뮬레이션 제안" 논문 발표</li>
@@ -282,6 +237,7 @@
                             <li>2024 BDIA Dev-ton 참여중</li>
                             <li>2024 SW/콘텐츠 분야 벤처스타트업 아카데미 해커톤 진행중</li>
                             <li>울산 AI배울랑교 인공지능 교육전 디지털콘텐츠제작 및 AI 적용 실습 교육 진행중</li>
+                            <li>㈜잼코딩학원 시간강사</li>
                         </ul>
                     </div>
                 </div>
@@ -292,12 +248,18 @@
                     <div class="timeline-content">
                         <h3>[교내]</h3>
                         <ul>
-                            <li>라즈베리파이를 이용한 "인체감지 경비 시스템" 텀프로젝트 진행</li>
-                            <li>Putty 환경 내 "멀티스레드 기반 네트워크 채팅" 텀프로젝트 진행</li>
+                            <li>부산가톨릭대학교 홍보대사 "트리니티" 부단장</li>
+                            <li>창업동아리 "Inspiration" 동아리장</li>
+                            <li>1학기 우수창업동아리 대상 (100만원)</li>
+                            <li>2학기 학과 석차 1위</li>
+                            <li>2학기 우수창업동아리 우수상 (60만원))</li>
                         </ul>
                         <h3>[교외]</h3>
                         <ul>
-                            <li>2023 클라우드 엑스포 코리아 컨퍼런스 교육 수료</li>
+                            <li>한국콘텐츠학회 2023 종합학술대회 "VR360 기반 아동 체험교육용 콘텐츠 사례" 논문 발표</li>
+                            <li>한국콘텐츠학회 2023 종합학술대회 "VR360을 활용한 평화공원 투어 애플리케이션" 논문 발표</li>
+                            <li>한국콘텐츠학회 2023 종합학술대회 "온라인쇼핑몰 상품 상세 페이지 디자인에 따른 고객 유입 통계" 논문 발표</li>
+                            <li>제 11회 K-해커톤 영남권 예선통과, 전국 본선 진출</li>
                         </ul>
                     </div>
                 </div>
@@ -306,13 +268,12 @@
                 <div class="timeline-item">
                     <div class="timeline-year">2020-22</div>
                     <div class="timeline-content">
-                        <h3>[교내]</h3>
-                        <ul>
-                            <li>소프트웨어학과 학생회 기획부장</li>
-                        </ul>
                         <h3>[교외]</h3>
                         <ul>
-                            <li>그래픽 디자인 프리랜서 활동</li>
+                            <li>한국정보통신학회 2020 종합학술대회 "심박수 측정 웨어러블 디바이스를 활용한 졸음운전 예방 앱 제안" 논문 발표</li>
+                            <li>한국정보통신학회 2020 종합학술대회 "길고양이 학대 예방을 위한 체험 VR 콘텐츠" 논문 발표</li>
+                            <li>쇼핑몰 웹디자이너(셀즈컴퍼니, 탑보그)</li>
+                            <li>㈜신세계아이앤씨 쇼핑몰 솔루션 수퍼바이저(Sellpick)</li>
                         </ul>
                     </div>
                 </div>
@@ -323,7 +284,8 @@
                     <div class="timeline-content">
                         <h3>[교내]</h3>
                         <ul>
-                            <li>소프트웨어학과 학생회 기획부장</li>
+                            <li>부산가톨릭대학교 40대 총학생회 기획부 차장 역임</li>
+                            <li>해외봉사활동 봉사단 선발</li>
                         </ul>
                     </div>
                 </div>
@@ -334,27 +296,22 @@
                     <div class="timeline-content">
                         <h3>[교내]</h3>
                         <ul>
-                            <li>2018학년도 CUP 봉사단 활동</li>
-                            <li>2018학년도 농촌봉사 활동 참여</li>
-                            <li>4D-CROSS MEDICAL 해커톤 인기상 수상</li>
-                            <li>교내 4D 헬스케어 사업단으로 ICT융복합전공 (1년)</li>
+                            <li>부산가톨릭대학교 소프트웨어학과 학년대표</li>
+                            <li>CUPBS 방송국 아나운서</li>
+                            <li>독서공모전 우수상</li>
+                            <li>교수 학습 능력 개발센터 프로그램 보고서 최우수상</li>
                         </ul>
-                        <h3>[교외]</h3>
-                        <li>2018학년도 제16회 KNN환경마라톤 봉사 참여</li>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="Etc" class="hidden">
-            <h2>Etc</h2>
-            <p></p>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024, KYH all right reserved, powred by github</p>
+        <p>&copy; 2024, freezino all rights reserved, designed by freezino, powered by github</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
