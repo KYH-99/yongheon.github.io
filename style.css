@@ -201,17 +201,22 @@ footer {
 }
 
     .hero-buttons button {
-        background: linear-gradient(135deg, #00000d, #000000);
-        border: none;
-        border-radius: 5px;
-        color: white;
-        padding: 40px 90px;
-        font-size: 26px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
+        display: inline-block;
+        padding: 20px 40px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: black;
+        border: 2px solid white;
+        text-decoration: none;
+        transition: 0.3s ease;
         overflow: hidden;
-        opacity:0.8;
+        z-index: 1;
+        cursor: pointer;
+        outline: none;
+        border-radius: 0;
     }
 
         .hero-buttons button::before {
@@ -235,7 +240,11 @@ footer {
         .hero-buttons button:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            filter: url(#filter); /* 필터 적용 */
         }
+        .svg-sprite {
+            display: none;
+          }
 .hero-shape {
     position: absolute;
     width: 300px;
