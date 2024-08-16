@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<title>CUP GALLERY</title>
+	<script>
+	function startTime(){
+		 var today = new Date(); // new Date로 시간정보 추출
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('clock').innerHTML = // inerHTML로 화면에 렌더링
+    "▶ "+ h + "h " + m + "m " + s+ "s ◀";
+    var t = setTimeout(startTime, 500); // 0.5초 마다 갱신
+	}
+
+	function checkTime(i) {
+    if (i < 10) {i = "0" + i}; // 숫자가 10보다 작을경우, 해당 텍스트 앞에 0을 붙여줌
+    return i;
+	}
+
+	</script>
+	</head>
+
+	<body onload="startTime()">
+		<!-- 헤더 -->
+			<header id="header">
+				<div class="logo"><a href="#"><span>YS. J & YH. K</span></a></div>
+			</header>
+
+		<!-- 여기부터 메인 -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- 최상단 -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="images/pic02.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>CUP GALLERY</h2>
+							<p>20180689 주윤성 | 201806664 권용헌</p>
+						</header>
+						<div class="content">
+						<center><h1>현재시각<br /></h1>
+						<h2><div id="clock"> </div></h2>
+							<p> 이 페이지에는 실시간 시계 표시 및 이미지 플로팅 js 및 갤러리 느낌의 html 배치를 구현하였습니다.</p></center>
+						</div>
+					</section>
+
+				<!-- 4분할 -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>MEMBER INSTRODUCTION</h2>
+							<p>커피 없이 못사는 그 친구들</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- 최하단 -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>BEST DRIVER</h3>
+								<p>우리의 친구 용헌이는, 운전을 정말 잘합니다. 이러한 장점덕분에, 친구들끼리 어디 여행을 갈때면 용헌이가 꼭 운전을 합니다. 꼭 해야만 합니다(?) 왜냐하면, 윤성이는 면허가 없기 때문이죠!</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+							<div  class="inner">
+								<h3>SUIT EVERYDAY</h3>
+								<p>또다른 우리의 친구 윤성이는, 총학생회에서 일하고 있습니다. 매일매일 학교 행사와 사건사고들을 처리 하고, 진행한다고 고생이 정말 많죠! 학교에서 하는거 아닌가 싶은 행사들이, 사실은 총학생회에서 하는 행사라는걸 많은 사람들이 알아야 합니다. 오늘도 윤성이는, 총장님과 점심식사를 하고 있네요. (소화가 잘 안됩니다)</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>HAPPY CAMPUS LIFE</h3>
+								<p>용헌이와 윤성이는, 대학생활을 정말 열심히 하고 있습니다. 사실 집이 먼 윤성이는, 학교를 왔다 갔다 하는데만 2시간이 걸립니다. 집이 먼 윤성이는 지각을 안하는데, 정작 부곡동에 살고 있는 용헌이는 지각을 합니다. 양심이 있는걸까요?</p>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</section>
+		<!-- 자바스크립트(이미지 띄워주는거) -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
