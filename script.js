@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Thesis ���� �⺻ �� ����
-    const defaultTabId = 'kiice';
+    const defaultTabId = 'kocon';
     tabButtons.forEach(btn => {
         const tabId = btn.getAttribute('data-tab');
         if (tabId === defaultTabId) {
