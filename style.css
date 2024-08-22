@@ -787,8 +787,11 @@ footer {
     }
 
 .etc-photo img {
-    min-width: 700px;
-    min-height: 750px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* 이미지 비율을 유지하면서 그리드 셀 크기에 맞게 조정 */
     border-radius: 8px;
     transition: opacity 0.3s ease;
 }
