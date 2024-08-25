@@ -1,0 +1,220 @@
+
+<meta charset="utf-8">
+<html lang="ko">
+<head>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .wrap-right {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .title-article {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    
+        .box-info {
+            text-align: center;
+            color: #777;
+        }
+    
+        .article-view {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .article-view h2,
+        .article-view h4 {
+            font-size: 1.5em;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+    
+        .article-view p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+    
+        .article-view img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        @media (max-width: 768px) {
+            .wrap-right {
+                padding: 10px;
+            }
+    
+            .title-article {
+                font-size: 1.5em;
+            }
+    
+            .article-view {
+                padding: 15px;
+            }
+    
+            .article-view h2,
+            .article-view h4 {
+                font-size: 1.2em;
+            }
+    
+            .article-view p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./../style.css" />
+    <title>Unity Photon2 Engine을 이용한 멀티플레이 플랫포머 게임 구현(Photon연결)</title>
+</head>
+<body id="tt-body-page" class="">
+<div id="wrap" class="wrap-right">
+    <div id="container">
+        <main class="main ">
+            <div class="area-main">
+                <div class="area-view">
+                    <div class="article-header">
+                        <div class="inner-article-header">
+                            <div class="box-meta">
+                                <h2 class="title-article">Unity Photon2 Engine을 이용한 멀티플레이 플랫포머 게임 구현(Photon연결)</h2>
+                                <div class="box-info">
+                                    <p class="category">참여: 권용헌, 주윤성, 이윤섭</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="article-view">
+                        <div class="contents_style">
+                            <h1 data-ke-size="size18"><b>Jumper</b></h1>
+                            <h2 data-ke-size="size18"><b>- photon의 장점</b></h2>
+<h3 data-ke-size="size16"><b>(1) 최대 20명까지 동시접속 가능한 서버를 무료로 사용 가능하기 때문에 간단한 프로젝트 진행 시 사용하기 좋습니다.</b></h3>
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size16"><b>- Photon 사이트</b></h2>
+<figure id="og_1721951406239" contenteditable="false" data-ke-type="opengraph" data-ke-align="alignCenter" data-og-type="website" data-og-title="글로벌 크로스 플랫폼 실시간 게임 개발 | Photon Engine" data-og-description="EssentialPhoton Details Discover a summary of our product range, notable features, the power of the Photon Cloud, and our cost-effective pricing plans. HAVE A LOOK" data-og-host="www.photonengine.com" data-og-source-url="https://www.photonengine.com/ko-kr" data-og-url="https://www.photonengine.com/ko-kr" data-og-image="https://scrap.kakaocdn.net/dn/e79ky/hyWGUntS63/iayKdGVz7UNKMSv2wnrIA0/img.jpg?width=1200&amp;height=630&amp;face=0_0_1200_630,https://scrap.kakaocdn.net/dn/ysJv1/hyWGRjYAPr/ns3nTME7sEw0KDnUVEEJQk/img.png?width=800&amp;height=500&amp;face=0_0_800_500,https://scrap.kakaocdn.net/dn/btGZPz/hyWCI3ioJh/kznGXyggKw7kw748y9Bki0/img.png?width=800&amp;height=500&amp;face=0_0_800_500"><a href="https://www.photonengine.com/ko-kr" target="_blank" rel="noopener" data-source-url="https://www.photonengine.com/ko-kr">
+<div class="og-text">
+<p class="og-title" data-ke-size="size16">글로벌 크로스 플랫폼 실시간 게임 개발 | Photon Engine</p>
+<p class="og-desc" data-ke-size="size16">EssentialPhoton Details Discover a summary of our product range, notable features, the power of the Photon Cloud, and our cost-effective pricing plans. HAVE A LOOK</p>
+<p class="og-host" data-ke-size="size16">www.photonengine.com</p>
+</div>
+</a></figure>
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size18"><b>- 진행 방법</b></h2>
+<h3 data-ke-size="size16"><b>(1) Photon 홈페이지 접속</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_K-001.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(2) 회원가입 진행 후 관리 화면으로 이동 후 새 어플리케이션 만들기 클릭.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-002.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(3) 멀티 플레이어 게임 부분 선택 후 Photon 종류는 Realtime으로 설정.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-003.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(4) 서버이름과 어디에 사용될건지 알아볼 수 있게 간단히 설명 적고 생성.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-004.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(5) 생성 후 관리화면을 클릭.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-005.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(6) 어플리케이션 ID 선택 후 복사.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-006.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(7) Unity로 접속 후 Package Manager선택.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-007.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(8) My Assets부분 Asset Store에서 받아온 PUN2-FREE Import.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-008.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(9) Import 후 Photon 폴더 선택 후 PhotonUnityNetworking 폴더 클릭.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-009.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(10) Resoruces 폴더 선택.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-010.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size16"><b>(11) Resource Server Settings 파일 선택 후&nbsp; App Id PUN 부분에 복사해 둔 ID 붙여 넣기.</b></h3>
+<h3 data-ke-size="size16"><b>(12) 연결 완료.</b></h3>
+<p><figure class="imageblock alignCenter" >
+    <span data-lightbox="lightbox">
+        <img src="./img/edited_edited_K-011.png"  />
+    </span>
+    <figcaption></figcaption>
+</figure></p>
+                        </div>
+                        <br/>
+                        <div class="tags">
+                            #서버 #네트워크 #개발 #개발자 #photon #Unity #Assets #캡스톤 디자인 #photon 연결 #멀티플레이 게임 만들기 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
