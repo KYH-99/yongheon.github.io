@@ -672,6 +672,7 @@ footer {
     transform: translateY(20px);
     position: relative;
     margin-bottom: 10px; /* 프로젝트 틀의 밑에 10px 공간 추가 */
+    text-align: center; /* 버튼들을 중앙 정렬 */
 }
 
 .project-item:nth-child(even) {
@@ -702,6 +703,40 @@ footer {
     margin-bottom: 60px; /* 서브타이틀과 버튼 사이의 공간 확보 */
 }
 
+.project-link, .project-link2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #000000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.project-link {
+    background: #3498db;
+    color: #ffffff;
+}
+
+.project-link2 {
+    background: #ffffff;
+    color: #000000;
+}
+
+.project-link:hover {
+    background: #2980b9;
+    color: #ffffff;
+}
+
+.project-link2:hover {
+    background: #000000;
+    color: #ffffff;
+}
+/*
 .project-link {
     display: inline-block;
     margin-top: 10px;
@@ -723,7 +758,7 @@ footer {
         color:#000000;
     }
 
-
+*/
 
 /* Certificates 섹션 스타일 */
 #certificates {
