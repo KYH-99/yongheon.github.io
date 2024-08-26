@@ -659,17 +659,19 @@ footer {
 }
 
 .project-item {
-    background: rgba(255,255,255, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     max-width: 350px;
-    max-height: 450px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Flexbox를 사용하여 수직 정렬 */
+    justify-content: space-between; /* 요소들 사이의 간격을 자동으로 조절 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
+    position: relative;
+    margin-bottom: 10px; /* 프로젝트 틀의 밑에 10px 공간 추가 */
 }
 
 .project-item:nth-child(even) {
@@ -697,7 +699,30 @@ footer {
 
 .project-subtitle {
     color: #666;
+    margin-bottom: 60px; /* 서브타이틀과 버튼 사이의 공간 확보 */
 }
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #000000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    margin-bottom:10px;
+}
+
+    .project-link:hover {
+        background: #ffffff;
+        color:#000000;
+    }
+
 
 
 /* Certificates 섹션 스타일 */
