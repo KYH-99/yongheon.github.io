@@ -736,29 +736,7 @@ footer {
     background: #000000;
     color: #ffffff;
 }
-/*
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #000000;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background 0.3s ease;
-    text-align:center;
-    position:absolute;
-    bottom:0;
-    margin-bottom:10px;
-}
 
-    .project-link:hover {
-        background: #ffffff;
-        color:#000000;
-    }
-
-*/
 
 /* Certificates 섹션 스타일 */
 #certificates {
@@ -789,11 +767,13 @@ footer {
     width:100%;
     height: 100%; /* 부모 요소의 전체 높이를 사용 */
     position: relative;
+    z-index: 1; /* 박스가 기본적으로 뒤로 가도록 낮은 z-index 설정 */
 }
 
     .certificate-item:hover {
         transform: translateY(-10px);
         box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        z-index: 100; /* 최상단으로 설정 */
     }
 
 .certificate-item:hover img {
@@ -805,9 +785,10 @@ footer {
     height: auto;
     max-width: 100vw; /* 최대 너비를 뷰포트의 100%로 설정 */
     max-height: 100vh; /* 최대 높이를 뷰포트의 100%로 설정 */
-    z-index: 9999; /* 최상단으로 설정 */
+    z-index: 100; /* 최상단으로 설정 */
     object-fit: contain; /* 이미지 비율 유지하며 확대 */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    
 }
 
 .certificate-title {
@@ -821,6 +802,7 @@ footer {
     max-width: 60%; /* 부모 요소에 맞춰 최대 가로 크기를 제한 */
     max-height: 60%; /* 부모 요소에 맞춰 최대 세로 크기를 제한 */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* 마우스 오버 시 애니메이션 */
+    object-fit: contain;
 }
 
 .certificate-item img:hover {
@@ -828,11 +810,15 @@ footer {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 90vw; /* 전체 너비의 90% */
+    width: auto;
     height: auto;
     max-width: 50vw; /* 최대 너비를 뷰포트의 100%로 설정 */
     max-height: 50vh; /* 최대 높이를 뷰포트의 100%로 설정 */
     object-fit: contain;
+    
+}
+#certificates .certificate-item {
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 /* Etc 섹션 스타일 */
@@ -906,6 +892,10 @@ footer {
 .etc-item:hover .etc-hover-content {
     display: block;
     opacity: 1;
+}
+
+#etc .etc-item {
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 /* 버튼 애니메이션 메인*/
