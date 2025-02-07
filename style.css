@@ -10,7 +10,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height:100%;
+    min-height: 100vh;
+    justify-content: space-between; /* 위아래 요소 정렬 */
     color:white;
     background-image:url('mainimg/cover.gif');
     background-repeat:no-repeat;
