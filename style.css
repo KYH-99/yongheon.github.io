@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     min-height:100%;
     color:white;
+    padding-bottom: 50px; /* footer 높이만큼 여백 추가 */
     background-image:url('mainimg/cover.gif');
     background-repeat:no-repeat;
     background-size:cover;
